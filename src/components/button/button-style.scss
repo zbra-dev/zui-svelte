@@ -1,0 +1,57 @@
+
+button {
+  box-sizing: border-box;
+  position: relative;
+  outline: none;
+  margin: 2px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  font-size: 1rem;
+  border: none;
+  min-height: 36px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+
+  color: var(--color);
+  background: var(--background);
+
+  border-radius: var(--border-radius);
+  border-width: var(--border-width);
+  border-style: var(--border-style);
+  border-color: var(--border-color);
+
+  &.expand {
+    width: 100%;
+    display: block;
+  }
+
+  &[disabled] {
+    background: #ccc;
+    color: #666;
+    cursor: initial;
+    border: none;
+  }
+
+  &:not([disabled]) {
+
+    &:hover {
+      color: var(--hover-color);
+      background: var(--hover-background);
+    }
+
+    &:active {
+      background: var(--active-background);
+      color: var(--active-color);
+    }
+    
+    &:focus {
+      outline: none;
+      box-shadow: 0px 0px 3px 1px var(--focus-color);
+    }
+  }
+  
+}
+
+// TODO: Implementar preprocessamento fora do componente
+@import './button-theme.scss';

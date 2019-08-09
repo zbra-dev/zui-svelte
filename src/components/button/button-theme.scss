@@ -1,0 +1,58 @@
+@import './button-style-setup.scss';
+
+$buttonStyles: (
+  primary: (
+    color: var(--primary-color-contrast),
+    background: var(--primary-color),
+    hover-color: var(--primary-color-contrast),
+    hover-background: var(--primary-color-highlight),
+    active-color: var(--primary-color-contrast),
+    active-background: var(--primary-color),
+    focus-color: var(--primary-color-highlight),
+    border-color: transparent,
+    border-radius: 4px,
+    border-width: 0,
+    border-style: none,
+  ),
+  outline: (
+    color: var(--primary-color),
+    background: var(--primary-color-contrast),
+    hover-color: var(--primary-color-highlight),
+    hover-background: var(--primary-color-light),
+    active-color: var(--primary-color-highlight),
+    active-background: var(--primary-color-contrast),
+    focus-color: var(--primary-color),
+    border-color: var(--primary-color),
+    border-radius: 4px,
+    border-width: 1px,
+    border-style: solid,
+  ),
+  clear: (
+    color: var(--dark-color),
+    background: var(--white-color),
+    hover-color: var(--dark-color),
+    hover-background: var(--light-color),
+    active-color: var(--dark-color),
+    active-background: var(--white-color),
+    focus-color: var(--medium-color),
+    border-color: transparent,
+    border-radius: 4px,
+    border-width: 0,
+    border-style: none,
+  ),
+  warn: (
+    color: var(--warn-color-contrast),
+    background: var(--warn-color),
+    hover-color: var(--warn-color-contrast),
+    hover-background: var(--warn-color-highlight),
+    active-color: var(--warn-color-contrast),
+    active-background: var(--warn-color),
+    focus-color: var(--warn-color-highlight),
+    border-color: transparent,
+    border-radius: 0,
+    border-width: 0,
+    border-style: none,
+  )
+);
+
+@include applyButtonStyles($buttonStyles);
