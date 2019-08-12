@@ -1,0 +1,14 @@
+
+@mixin applyButtonStyle($styleName, $buttonStyle) {
+  .button-style-#{$styleName} {
+    @each $prop, $value in $buttonStyle {
+      --#{$prop}: #{$value};
+    }
+  }
+}
+
+@mixin applyButtonStyles($styles) {
+  @each $name, $style in $styles {
+    @include applyButtonStyle($name, $style);
+  }
+}
